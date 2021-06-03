@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Kolis konyha</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+  <script src="js/methods.js"></script>
+  <script src="js/kosar.js"></script>
+</head>
+
+<body>
+  <!-- Grid layout: https://codepen.io/angeladelise/pen/YzXLdyq?editors=1100 -->
+  <div class="containerFoOldal">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand oldalCim" href="#">Kolis konyha</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" id="fooldalNavLi">
+            <a class="nav-link" id="fooldalNav" href="index.html">Főoldal<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" id="menuNavLi">
+            <a class="nav-link" id="menuNav" href="kinalat.html">Kínálatunk</a>
+          </li>
+          <li class="nav-item" id="szallitasNavLi">
+            <a class="nav-link" id="szallitasNav" href="szallitas.html">Kiszállítás</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active" id="kosarNavLi">
+            <a class="nav-link" id="kosarNav"><img src="images/bevKosar.svg" class="icon"><span id="badge">0</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+    <div id="uresKosarDiv" class="uzenes">
+      <h1 class="uzenesSzoveg">Üres a kosarad!</h1> 
+    </div>
+   <div id="koszonesDiv" class="uzenes">
+     <h1 class="uzenesSzoveg">Köszönjük a rendelését! ʕ•́ᴥ•̀ʔ</h1>
+   </div>
+     <div id="valtas">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Miből</th>
+            <th scope="col">Mennyiért</th>
+            <th scope="col">Mennyit</th>
+          </tr>
+        </thead>
+        <tbody id="kosarTablazat">
+        </tbody>
+      </table>
+      <form id="form1">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputFirstName">Vezetéknév</label>
+            <input type="text" class="form-control" id="inputFirstName">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastName">Keresztnév</label>
+            <input type="text" class="form-control" id="inputLastName">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputNumber4">Telefonszám</label>
+            <input type="tel" class="form-control" id="inputNumber4" placeholder="+36">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Cím</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="pl. Városmajor út. 4">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Város</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">Megye</label>
+            <select id="inputState" class="form-control">
+              <option selected>Válassz...</option>
+              <option>Baranya</option>
+              <option>Bács-Kiskun</option>
+              <option>Békés</option>
+              <option>Borsod-Abaúj-Zemplén</option>
+              <option>Budapest</option>
+              <option>Csongrád-Csanád</option>
+              <option>Fejér</option>
+              <option>Győr-Moson-Sopron</option>
+              <option>Hajdú-Bihar</option>
+              <option>Heves</option>
+              <option>Jász-Nagykun-Szolnok</option>
+              <option>Komárom-Esztergom</option>
+              <option>Nógrád</option>
+              <option>Pest</option>
+              <option>Somogy</option>
+              <option>Szabolcs-Szatmár-Bereg</option>
+              <option>Tolna</option>
+              <option>Vas</option>
+              <option>Veszprém</option>
+              <option>Zala</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Irányítószám</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <fieldset class="form-group row">
+          <div class="col-sm-10" id="fizetesiMod">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                Fizetés futárnál (Készpénz vagy kártya)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Bankkártyás fizetés
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <input type="button" id="veglegesites1" value="Véglegesítés" class="btn btn-primary">
+       </div>
+      </form>
+      <div class="creditCardForm">
+        <div class="payment">
+            <form id="form2">
+                <div class="form-group owner">
+                    <label for="owner">Kártyatulajdonos neve</label>
+                    <input type="text" class="form-control" id="owner">
+                </div>
+                <div class="form-group CVV">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv">
+                </div>
+                <div class="form-group" id="card-number-field">
+                    <label for="cardNumber">Kártyaszám</label>
+                    <input type="text" class="form-control" id="cardNumber">
+                </div>
+                <div class="form-group" id="expiration-date">
+                    <label>Lejárati dátum</label>
+                    <select>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    /
+                    <select>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                    </select>
+                </div>
+                <div class="form-group" id="credit_cards">
+                    <img src="images/Visa_Inc._logo.svg" class="kartyaSvg" id="visa">
+                    <img src="images/logo-mastercard-mobile.svg" class="kartyaSvg" id="mastercard">
+                </div>
+                <div class="form-group">
+                   <input type="button" id="veglegesites2" value="Véglegesítés" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+    </main>
+    <footer class="bg-white">
+      <div class="container text-center py-4">
+        <p class="mb-0 py-2">© 2021 Kolis Konyha All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>

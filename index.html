@@ -1,10 +1,71 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="hu">
+
 <head>
-<title>IDE írd be a repó nevét:
-</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Kolis konyha</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+  <script src="js/methods.js"></script>
+  <script src="js/fooldal.js"></script>
 </head>
+
 <body>
-<h1>Működik</h1>
+  <!-- Grid layout: https://codepen.io/angeladelise/pen/YzXLdyq?editors=1100 -->
+  <div class="containerFoOldal">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand oldalCim" href="#">Kolis konyha</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" id="fooldalNavLi">
+            <a class="nav-link" id="fooldalNav">Főoldal<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" id="menuNavLi">
+            <a class="nav-link" id="menuNav" href="kinalat.html">Kínálatunk</a>
+          </li>
+          <li class="nav-item" id="szallitasNavLi">
+            <a class="nav-link" id="szallitasNav" href="szallitas.html">Kiszállítás</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" id="kosarNavLi">
+            <a class="nav-link" id="kosarNav" href="kosar.html"><img src="images/bevKosar.svg" class="icon"><span
+                id="badge">0</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <p class="bevText">„A Kolis konyha <span id="bold"> Gerzsenyi Patrik </span> és <span id="bold">Csizmadia
+          Zsombor</span> diákok összefogásának eredménye.
+        Mindketten kollégiumi életet élnek, és nem egyszer alakult úgy, hogy éhségüket nem otthoni koszttal szerették
+        volna kielégíteni, hanem valami különlegességgel. Ez gyakran meghiúsult a modern és igen kívánatos ételek
+        drágasága miatt.
+        Arra a következtetésre jutottak, hogy ha ők ezzel a problémával
+        küzdenek, akkor bizonyára mások is. Ezért úgy döntöttek, hogy saját éttermet / webshopot nyitnak, ezzel ezrek
+        életét
+        megkönnyítve.”
+      </p>
+    </main>
+    <footer class="bg-white">
+      <div class="container text-center py-4">
+        <p class="mb-0 py-2">© 2021 Kolis Konyha All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
 </body>
+
 </html>

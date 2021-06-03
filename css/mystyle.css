@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    overflow-x: hidden;
+    user-select: none;
+}
+
+/* Grid layout: https://codepen.io/angeladelise/pen/YzXLdyq?editors=1100 */
+
+.containerFoOldal {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.5fr 0.1fr;
+    grid-template-areas:
+        "nav nav nav"
+        "main main main"
+        "footer footer footer";
+    font-weight: 800;
+    font-size: 15px;
+    color: black;
+    background-color: snow;
+    animation: fadeIn linear 1.2s;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    grid-area: nav;
+    border-bottom: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, salmon, red, blue, green, #004d40);
+    font-family: 'Pattaya', sans-serif;
+}
+
+main {
+    background: snow;
+    grid-area: main;
+    overflow-y: auto;
+    padding: 5px 10% 0px 10%;
+    height: 100%;
+}
+
+footer {
+    grid-area: footer;
+    box-shadow: 0.4px;
+    font-family: 'Pattaya', sans-serif;
+}
+
+a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+/* Grid layout: https://codepen.io/angeladelise/pen/YzXLdyq?editors=1100 */
+
+@media only screen and (max-width: 550px) {
+    .containerFoOldal {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1.5fr 0.1fr;
+        grid-template-areas:
+            "nav"
+            "main"
+            "footer";
+    }
+}
+
+a.nav-link {
+    transition: all .2s ease-in-out;
+}
+
+a.nav-link:hover {
+    transform: scale(1.4);
+}
+
+a.navbar-brand {
+    font-size: 29px;
+    margin-right: 40px;
+}
+
+.bevText {
+    margin-top: 80px;
+    font-size: 300%;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+.card {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin: 15px auto 25px auto;
+    float: none;
+}
+
+.card-title {
+    font-family: 'Pattaya', sans-serif;
+}
+
+.card-text {
+    font-size: 15px;
+}
+
+.btn {
+    font-family: 'Pattaya', sans-serif;
+}
+
+#badge {
+    background-color: #004d40;
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-size: 9px;
+    line-height: 1;
+    padding: 5px 7px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
+.biggerIcon {
+    height: 44px;
+    width: 44px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li {
+    margin: 5px 0px 5px 0px;
+}
+
+.kiszCim {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#kiemelt {
+    font-weight: bold;
+}
+
+.kartyaSvg {
+    height: 60px;
+    width: 128px;
+}
+
+#form1 {
+    display: none;
+}
+
+#form2 {
+    display: none;
+}
+
+.uzenes {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+}
+
+#koszonesDiv {
+    display: none;
+}
+
+.uzenesSzoveg {
+    font-size: 112px;
+    font-family: 'Pattaya', sans-serif;
+}
+
+#uresKosarDiv {
+    display: none;
+}

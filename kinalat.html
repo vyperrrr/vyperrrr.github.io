@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Kolis konyha</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+  <script src="js/methods.js"></script>
+  <script src="js/kinalat.js"></script>
+</head>
+
+<body>
+  <!-- Grid layout: https://codepen.io/angeladelise/pen/YzXLdyq?editors=1100 -->
+  <div class="containerFoOldal">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand oldalCim" href="#">Kolis konyha</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" id="fooldalNavLi">
+            <a class="nav-link" id="fooldalNav" href="index.html">Főoldal<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active" id="menuNavLi">
+            <a class="nav-link" id="menuNav">Kínálatunk</a>
+          </li>
+          <li class="nav-item" id="szallitasNavLi">
+            <a class="nav-link" id="szallitasNav" href="szallitas.html">Kiszállítás</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" id="kosarNavLi">
+            <a class="nav-link" id="kosarNav" href="kosar.html"><img src="images/bevKosar.svg" class="icon"><span
+                id="badge">0</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_01.jpg" class="card-img-top" alt="Hot Burger">
+            <div class="card-body">
+              <h5 class="card-title" id="card1name">Hot Burger</h5>
+              <p class="card-text">Előkelő és egyben meglepő étel.</p>
+              <input type="button" class="btn btn-primary" id="card1price" value="320 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_02.jpg" class="card-img-top" alt="Tarjás Tortilla">
+            <div class="card-body">
+              <h5 class="card-title" id="card2name">Tarjás Tortilla</h5>
+              <p class="card-text">Reggelinek kitűnő.</p>
+              <input type="button" class="btn btn-primary" id="card2price" value="560 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_03.jpg" class="card-img-top" alt="Húsos Pitypang">
+            <div class="card-body">
+              <h5 class="card-title" id="card3name">Húsos Pitypang</h5>
+              <p class="card-text">Igen, pitypang, ehető. Elég kívánatos.</p>
+              <input type="button" class="btn btn-primary" id="card3price" value="700 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_04.jpg" class="card-img-top" alt="Talán Palacsinta">
+            <div class="card-body">
+              <h5 class="card-title" id="card4name">Talán Palacsinta</h5>
+              <p class="card-text">Nem biztos, amíg ki nem próbálod..</p>
+              <input type="button" class="btn btn-primary" id="card4price" value="50 Yang">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_05.jpg" class="card-img-top" alt="Darázs Leves">
+            <div class="card-body">
+              <h5 class="card-title" id="card5name">Darázs Leves</h5>
+              <p class="card-text">Laktató, bár kicsit csípős.</p>
+              <input type="button" class="btn btn-primary" id="card5price" value="990 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_06.jpg" class="card-img-top" alt="Zöld Pogácsa Kosár">
+            <div class="card-body">
+              <h5 class="card-title" id="card6name">Zöld Pogácsa Kosár</h5>
+              <p class="card-text">Ételszínezék miatt zöld, trust me.</p>
+              <input type="button" class="btn btn-primary" id="card6price" value="780 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_07.jpg" class="card-img-top" alt="Humusz Pehely">
+            <div class="card-body">
+              <h5 class="card-title" id="card7name">Hummusz Pehely</h5>
+              <p class="card-text">Kis édesség.</p>
+              <input type="button" class="btn btn-primary" id="card7price" value="365 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_08.jpg" class="card-img-top" alt="Betyáros Hot Dog">
+            <div class="card-body">
+              <h5 class="card-title" id="card8name">Betyáros Hot Dog</h5>
+              <p class="card-text">1 hétig kitart.</p>
+              <input type="button" class="btn btn-primary" id="card8price" value="520 Yang">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_09.jpg" class="card-img-top" alt="Sajtos, Virslis Gabona Pehely">
+            <div class="card-body">
+              <h5 class="card-title" id="card9name">Sajtos, Virslis Gabona Pehely</h5>
+              <p class="card-text">Olasz ízvilág.</p>
+              <input type="button" class="btn btn-primary" id="card9price" value="770 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_10.jpg" class="card-img-top" alt="Szerény Falat">
+            <div class="card-body">
+              <h5 class="card-title" id="card10name">Szerény Falat</h5>
+              <p class="card-text">Olcsó és kaja.</p>
+              <input type="button" class="btn btn-primary" id="card10price" value="30 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_11.jpg" class="card-img-top" alt="Valami Püré">
+            <div class="card-body">
+              <h5 class="card-title" id="card11name">Valami Püré</h5>
+              <p class="card-text">Senki se tudja, hogy miből készült.</p>
+              <input type="button" class="btn btn-primary" id="card11price" value="200 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_12.jpg" class="card-img-top" alt="Húsleves Lite">
+            <div class="card-body">
+              <h5 class="card-title" id="card12name">Húsleves Lite</h5>
+              <p class="card-text">Finom, tele vitaminokkal.</p>
+              <input type="button" class="btn btn-primary" id="card12price" value="599 Yang">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_13.jpg" class="card-img-top" alt="Mirelit Pizza Extra feltéttel">
+            <div class="card-body">
+              <h5 class="card-title" id="card13name">Mirelit Pizza Extra feltéttel</h5>
+              <p class="card-text">Az egész szoba jól lakhat belőle.</p>
+              <input type="button" class="btn btn-primary" id="card13price" value="920 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_14.jpg" class="card-img-top" alt="A Séf Kedvence">
+            <div class="card-body">
+              <h5 class="card-title" id="card14name">A Séf Kedvence</h5>
+              <p class="card-text">Tényleg.</p>
+              <input type="button" class="btn btn-primary" id="card14price" value="1270 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_15.jpg" class="card-img-top" alt="Virsli és Emergency mártás">
+            <div class="card-body">
+              <h5 class="card-title" id="card15name">Virsli és Emergency mártás</h5>
+              <p class="card-text">Tárcsázd a 104-et kóstoló előtt.</p>
+              <input type="button" class="btn btn-primary" id="card15price" value="300 Yang">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img src="images/finomságok/food_16.jpg" class="card-img-top" alt="Csütörtöki lakoma">
+            <div class="card-body">
+              <h5 class="card-title" id="card16name">Csütörtöki lakoma</h5>
+              <p class="card-text">Csütörtökökön megváltást jelent.</p>
+              <input type="button" class="btn btn-primary" id="card16price" value="150 Yang">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white">
+      <div class="container text-center py-4">
+        <p class="mb-0 py-2">© 2021 Kolis Konyha All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+</html>
